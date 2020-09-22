@@ -3,6 +3,7 @@
 <title>Home | Mark Menesses</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="carousel.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/cooper-hewitt" type="text/css"/>
@@ -19,8 +20,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
   <div class="w3-bar w3-light-grey w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="../" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
-    <a href="../experimental" class="w3-bar-item w3-button w3-padding-large w3-white">Research</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a>
+    <a href="../experimental" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Research</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-pale-red">Projects</a>
     <a href="../photography" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Scientific Photography</a>
   </div>
 
@@ -33,23 +34,79 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-light-grey w3-center" style="padding:128px 16px">
-  <h2 class="w3-margin w3-xxlarge">Research</h2>
-  <h5 class="w3-padding-32">My research has focused on fundamentals and applications of fluid mechanics at scales where surface tension plays a dominant role. At these small scales</h5>
-
+<header class="w3-container w3-light-grey w3-center" style="padding:82px 16px 64px 16px">
+  <h2 class="w3-margin w3-xxlarge">Projects</h2>
+  <h5 class="w3-large">A sampling of some work and personal projects.</h5>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-24 w3-container">
   <div class="w3-content">
-    <div class="w3-half w3-row-padding">
-      <h2 class="w3-center">Evaporation stabilized bubbles</h2>
-      <h5 class="w3-justify w3-large">When we find bubbles at the surface liquids, whether its washing dishes or drinking a beer, these bubbles are stable due to the presence of surfactants.       Without surfactants, we expect bubbles to pop almost instantly; however, we found that bubbles can persist in volatile liquids much longer than expected thanks to temperature gradents that result from rapid evaporation.</h5>
+    <div class="w3-half w3-row-padding w3-justify">
+      <h2 class="w3-center">Scanning Imager</h2>
+      In the Cira Lab, we needed the ability to scan over a 30cm X 30cm area and take images of predetermied locations.
+      We also wanted the ability to use epifluorescence for some image sets.
+      I designed a stage-mounted imaging system to accomplish this task.
+      The stage was belt driven and controlled using a GRBL controller.
+      The optical system featured two swappable lenses which enabled a wide range of magnifications (our setup spanned 0.5x-4.4x).
+      A collimation arm allowed simple epi-illumination, and filtersets were easily incorporated within a filter cube located between the two lenses.
+      Some images of the system, and some models are featured to the right.
+      The MATLAB code can be found <a href="https://github.com/menesses/SPOTs_scanner">here</a>.
+      A more formal write-up on this system is coming soon!
     </div>
 
-    <div class="w3-half w3-row-padding w3-center">
-      <iframe width=100% height="300" src="https://www.youtube-nocookie.com/embed/69Ero5c17Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p class="w3-text-grey">The above video received a Gallery of Fluid Motion Award at the annual American Physical Society Division of Fluid Dynamics meeting in 2018.</p>
+    <div class="w3-half w3-row-padding w3-center carousel-container">
+      <div class="carousel my-carousel carousel--translate">
+        <input class="carousel__activator" type="radio" name="carousel" id="A" checked="checked"/>
+        <input class="carousel__activator" type="radio" name="carousel" id="B"/>
+        <input class="carousel__activator" type="radio" name="carousel" id="C"/>
+        <input class="carousel__activator" type="radio" name="carousel" id="D"/>
+        <input class="carousel__activator" type="radio" name="carousel" id="E"/>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="E"></label>
+          <label class="carousel__control carousel__control--forward" for="B"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="A"></label>
+          <label class="carousel__control carousel__control--forward" for="C"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="B"></label>
+          <label class="carousel__control carousel__control--forward" for="D"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="C"></label>
+          <label class="carousel__control carousel__control--forward" for="E"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="D"></label>
+          <label class="carousel__control carousel__control--forward" for="A"></label>
+        </div>
+        <div class="carousel__track">
+          <li class="carousel__slide">
+            <img src="optics_head_sketch.png" style="width:auto; height:100%">
+          </li>
+          <li class="carousel__slide">
+            <img src="DSC_2706.JPG" style="width:100%; height:auto">
+          </li>
+          <li class="carousel__slide">
+            <img src="DSC_2707.JPG" style="width:100%; height:auto">
+          </li>
+          <li class="carousel__slide">
+            <img src="DSC_2707.JPG" style="width:100%; height:auto">
+          </li>
+          <li class="carousel__slide">
+            <img src="DSC_2708.JPG" style="width:100%; height:auto">
+          </li>
+        </div>
+        <div class="carousel__indicators">
+          <label class="carousel__indicator" for="A"></label>
+          <label class="carousel__indicator" for="B"></label>
+          <label class="carousel__indicator" for="C"></label>
+          <label class="carousel__indicator" for="D"></label>
+          <label class="carousel__indicator" for="E"></label>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -65,9 +122,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
       <h2 class="w3-center">Bubbles and biofouling</h2>
       <h5 class="w3-large">Marine biofouling, or the collection of unwanted organisms on submerged surfaces, presents a large economic and environmental cost around the globe. We've investigated the influence that bubbles have on this biofouling growth.</h5>
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+
+
+
+
+
     </div>
   </div>
 </div>
@@ -88,7 +149,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-black w3-padding-64 w3-center w3-opacity">
+<footer class="w3-container w3-black w3-center w3-opacity">
   <div class="w3-xlarge w3-padding-32">
     <a href="https://www.linkedin.com/in/mark-m-1863891a/" class="w3-hover-text-indigo"><i class="fab fa-linkedin"></i></a>
   </div>
