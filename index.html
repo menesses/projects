@@ -59,9 +59,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 
     <div class="w3-half w3-row-padding w3-center carousel-container">
       <div class="carousel my-carousel carousel--translate">
-        <input class="carousel__activator" type="radio" name="carousel" id="A" checked="checked"/>
-        <input class="carousel__activator" type="radio" name="carousel" id="B"/>
-        <input class="carousel__activator" type="radio" name="carousel" id="C"/>
+        <input class="carousel__activator" type="radio" name="carousel1" id="A" checked="checked"/>
+        <input class="carousel__activator" type="radio" name="carousel1" id="B"/>
+        <input class="carousel__activator" type="radio" name="carousel1" id="C"/>
         <div class="carousel__controls">
           <label class="carousel__control carousel__control--backward" for="C"></label>
           <label class="carousel__control carousel__control--forward" for="B"></label>
@@ -87,7 +87,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
         </div>
         <div class="carousel__indicators">
           <label class="carousel__indicator" for="A"></label>
+
           <label class="carousel__indicator" for="B"></label>
+
           <label class="carousel__indicator" for="C"></label>
         </div>
       </div>
@@ -99,35 +101,62 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-half w3-center">
-      <i class="fa fa-tools w3-padding-64 w3-text-red w3-margin-right"></i>
+      <div class="carousel my-carousel carousel--translate">
+        <input class="carousel__activator" type="radio" name="carousel2" id="D" checked="checked"/>
+        <input class="carousel__activator" type="radio" name="carousel2" id="E"/>
+        <input class="carousel__activator" type="radio" name="carousel2" id="F"/>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="F"></label>
+          <label class="carousel__control carousel__control--forward" for="E"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="D"></label>
+          <label class="carousel__control carousel__control--forward" for="F"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="E"></label>
+          <label class="carousel__control carousel__control--forward" for="D"></label>
+        </div>
+        <div class="carousel__track">
+          <li class="carousel__slide">
+            <img src="optics_head_sketch.png" style="width:auto; height:90%">
+          </li>
+          <li class="carousel__slide">
+            <img src="optics_head_sketch.png" style="width:auto; height:100%">
+          </li>
+          <li class="carousel__slide">
+            <img src="optics_head_sketch.png" style="width:100%; height:auto">
+          </li>
+        </div>
+        <div class="carousel__indicators">
+          <label class="carousel__indicator" for="D"></label>
+
+          <label class="carousel__indicator" for="E"></label>
+
+          <label class="carousel__indicator" for="F"></label>
+        </div>
+      </div>
     </div>
+    <div class="w3-half w3-justify">
+      <h2 class="w3-center">Dog watching with Raspberry Pi Camera</h2>
+        <p>
+          When we first got our dog, Sadie, we had some hesitancy leaving her home alone, so I decided this was a good chance to play around with a Raspberry Pi.
+          The goal was to have a camera that I could mount and pan to get maximum visual coverage.
+          I went with an SG90 servo for panning as I had one on-hand, and I used a Raspberry Pi Zero W with the Raspberry Pi Camera V2 for video.
+          The Pi Zero ran a Python Flask server which served up the video feed.
+          I had the camera pivot to discrete locations using the Python script to fire up the servo when a particular page was fetched (i.e. foo.bar/couch, foo.bar/door, foo.bar/hallway).
+          To access the video feed while out and about, I setup the Pi Zero with a dynamic DNS through noip.com
+          When mounted in a doorway to our living room, we had good coverage of the typical places Sadie would be.
+        </p>
+        <p>
+          All-in-all, this project worked pretty great.
+          As you can see from the pictures, the early version was litterally held together by cardboard and duct tape.
+          We stopped using the camera before I had a chance to improve the mounting, but I've included some designs I considered printing.
+          Perhaps using a beefier RPi, it could be possible to do object tracking and follow Sadie (if she ever got off the couch).
+          This was my first time using Flask, so the code is not pretty.
+          May clean it up and post it here sometime in the future.
 
-    <div class="w3-half">
-      <h2 class="w3-center"></h2>
-      <h5 class="w3-large"></h5>
-
-
-
-
-
-
-
-
-    </div>
-  </div>
-</div>
-
-<!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-half">
-      <h2 class="w3-center"></h2>
-      <h5 class="w3-large"> </h5>
-      <p class="w3-text-grey"></p>
-    </div>
-
-    <div class="w3-half w3-center">
-      <i class="fab fa-react w3-padding-64 w3-text-red"></i>
+        </p>
     </div>
   </div>
 </div>
