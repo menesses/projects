@@ -38,12 +38,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 <header class="w3-container w3-light-grey w3-center" style="padding:82px 16px 64px 16px">
   <h2 class="w3-margin w3-xxlarge">Projects</h2>
   <h5 class="w3-large">A sampling of some work and personal projects.</h5>
-  <p>
-    PAGE IN PROGRESS
-  </p>
-  <p>
-
-  </p>
 </header>
 
 <!-- First Grid -->
@@ -55,9 +49,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
       We also wanted the ability to use epifluorescence for some image sets.
       I designed a stage-mounted imaging system to accomplish this task.
       The stage, purchased as a kit from OpenBuilds, was belt driven and controlled using a GRBL controller.
-      The optical system featured two swappable lenses which enabled a wide range of magnifications (our setup spanned 0.5x-4.4x).
+      The optical system featured two swappable lenses position which enabled a wide range of magnifications (our setup spanned 0.5x-4.4x).
       A collimation arm allowed simple epi-illumination, and filtersets were easily incorporated within a filter cube located between the two lenses.
-      Some images of the system, and some models are featured to the right.
+      A schematic of the optical components is featured to the right.
+      I'll soon be adding some images and videos of the system in motion.
       The MATLAB code can be found <a href="https://github.com/menesses/SPOTs_scanner">here</a>.
       A more formal write-up on this system is coming soon!
     </div>
@@ -66,17 +61,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
       <div class="carousel my-carousel carousel--translate">
         <input class="carousel__activator" type="radio" name="carousel1" id="A1" checked="checked"/>
         <input class="carousel__activator" type="radio" name="carousel1" id="B1"/>
-        <input class="carousel__activator" type="radio" name="carousel1" id="C1"/>
         <div class="carousel__controls">
-          <label class="carousel__control carousel__control--backward" for="C1"></label>
+          <label class="carousel__control carousel__control--backward" for="B1"></label>
           <label class="carousel__control carousel__control--forward" for="B1"></label>
         </div>
         <div class="carousel__controls">
           <label class="carousel__control carousel__control--backward" for="A1"></label>
-          <label class="carousel__control carousel__control--forward" for="C1"></label>
-        </div>
-        <div class="carousel__controls">
-          <label class="carousel__control carousel__control--backward" for="B1"></label>
           <label class="carousel__control carousel__control--forward" for="A1"></label>
         </div>
         <div class="carousel__track">
@@ -84,16 +74,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
             <img src="optics_head_sketch.png" style="width:auto; height:90%">
           </li>
           <li class="carousel__slide">
-            <img src="optics_head_sketch.png" style="width:auto; height:100%">
-          </li>
-          <li class="carousel__slide">
-            <img src="optics_head_sketch.png" style="width:100%; height:auto">
+            <img src="epiillumination_test.jpg" style="width:auto; height:80%">
+            <p class="w3-small w3-text-grey">
+              Testing the epi-illumination setup.
           </li>
         </div>
         <div class="carousel__indicators">
           <label class="carousel__indicator" for="A1"></label>
           <label class="carousel__indicator" for="B1"></label>
-          <label class="carousel__indicator" for="C1"></label>
         </div>
       </div>
     </div>
@@ -101,9 +89,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-grey w3-padding-24 w3-container">
   <div class="w3-content">
-    <div class="w3-half w3-center">
+    <div class="w3-half w3-padding-64 w3-center">
       <div class="carousel my-carousel carousel--translate">
         <input class="carousel__activator" type="radio" name="carousel0" id="A0" checked="checked"/>
         <input class="carousel__activator" type="radio" name="carousel0" id="B0"/>
@@ -133,7 +121,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
       </div>
     </div>
     <div class="w3-half w3-justify">
-      <h2 class="w3-center">Jet Drops Education Activity</h2>
+      <h2 class="w3-center">Jet Drop Education Activity</h2>
         <p>
           Working with the Museum of Science, I helped create a hands-on activity teaching the public about jet drop production and aerosol generation from bubbles.
           The activity sought to engage both young museum go-ers as well as their caregivers.
@@ -152,8 +140,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
   </div>
 </div>
 
+<div class="w3-container w3-padding-64">
+  <div class="w3-content">
+    <div class="w3-col w3">
+      <h2 class="w3-center">
+        <em>More coming soon!</em>
+      </h2>
+    </div>
+  </div>
+</div>
 
-<!-- Third Grid -->
+
+<!--Third Grid
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-half w3-justify">
@@ -214,7 +212,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
     </div>
   </div>
 </div>
-
+-->
 
 <!-- Fourth Grid
 <div class="w3-row-padding w3-padding-24 w3-light-grey w3-container">
