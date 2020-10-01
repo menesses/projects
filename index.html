@@ -37,7 +37,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-light-grey w3-center" style="padding:82px 16px 64px 16px">
   <h2 class="w3-margin w3-xxlarge">Projects</h2>
-  <h5 class="w3-large">A sampling of some work and personal projects.</h5>
 </header>
 
 <!-- First Grid -->
@@ -61,12 +60,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
       <div class="carousel my-carousel carousel--translate">
         <input class="carousel__activator" type="radio" name="carousel1" id="A1" checked="checked"/>
         <input class="carousel__activator" type="radio" name="carousel1" id="B1"/>
+        <input class="carousel__activator" type="radio" name="carousel1" id="C1"/>
         <div class="carousel__controls">
-          <label class="carousel__control carousel__control--backward" for="B1"></label>
+          <label class="carousel__control carousel__control--backward" for="C1"></label>
           <label class="carousel__control carousel__control--forward" for="B1"></label>
         </div>
         <div class="carousel__controls">
           <label class="carousel__control carousel__control--backward" for="A1"></label>
+          <label class="carousel__control carousel__control--forward" for="C1"></label>
+        </div>
+        <div class="carousel__controls">
+          <label class="carousel__control carousel__control--backward" for="B1"></label>
           <label class="carousel__control carousel__control--forward" for="A1"></label>
         </div>
         <div class="carousel__track">
@@ -78,10 +82,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "cooper-hewitt", sans-serif}
             <p class="w3-small w3-text-grey">
               Testing the epi-illumination setup.
           </li>
+          <li class="carousel__slide">
+            <video controls style="max-width:100%; max-height:100%">
+              <source src="movies/spots_scanner_720p_60x.mp4" type="video/mp4">
+              <source src="movies/spots_scanner_720p_60x.webm" type="video/webm">
+            </video>
+          </li>
         </div>
         <div class="carousel__indicators">
           <label class="carousel__indicator" for="A1"></label>
           <label class="carousel__indicator" for="B1"></label>
+          <label class="carousel__indicator" for="C1"></label>
         </div>
       </div>
     </div>
